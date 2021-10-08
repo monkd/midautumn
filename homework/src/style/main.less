@@ -1,0 +1,160 @@
+@import './mixin.less';
+@import './animation.less';
+@import './reset.less';
+
+.inline {
+    display: inline-block;
+}
+
+.background {
+    height: 100%;
+    background: url(../image/bg2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.sprite {
+    background: url(../image/sprite.png) no-repeat;
+    background-size: 1000px 1000px;
+}
+
+.outputext{
+    width: 300px;
+    height: 100px;
+    background-color:#AEEEEE;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container {
+    overflow: hidden;
+    .title-container {
+        position: relative;
+        height: 260px;
+        .title {
+            width: 338px;
+            height: 110px;
+            top: 46px;
+            .hCenter;
+            background-position: -280px -160px;
+        }
+        .title-text {
+            width: 85px;
+            height: 85px;
+            top: 60px;
+            .hCenter;
+            background-position: -280px -280px;
+        }
+        .title-text2 {
+            width: 260px;
+            height: 50px;
+            top: 160px;
+            .hCenter;
+            background-position: -280px -100px;
+        }
+        .title-description {
+            width: 260px;
+            height: 35px;
+            top: 200px;
+            .hCenter;
+            background-position: -280px -55px;
+        }
+    }
+    .bowl-container {
+        text-align: center;
+        margin-top: 30px;
+        .bowl {
+            width: 260px;
+            height: 215px;
+            position: relative;
+            background-position: -10px -10px;
+            .dice {
+                display: none;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                &.dice1 {
+                    background-position: -280px -10px;
+                }
+                &.dice2 {
+                    background-position: -325px -10px;
+                }
+                &.dice3 {
+                    background-position: -370px -10px;
+                }
+                &.dice4 {
+                    background-position: -415px -10px;
+                }
+                &.dice5 {
+                    background-position: -460px -10px;
+                }
+                &.dice6 {
+                    background-position: -505px -10px;
+                }
+                &.dice-position1 {
+                    .position(90px, 80px);
+                }
+                &.dice-position2 {
+                    .position(72px, 118px);
+                }
+                &.dice-position3 {
+                    .position(88px, 160px);
+                }
+                &.dice-position4 {
+                    .position(122px, 160px);
+                }
+                &.dice-position5 {
+                    .position(142px, 118px);
+                }
+                &.dice-position6 {
+                    .position(122px, 80px);
+                }
+                &.dice-position7 {
+                    .position(108px, 118px);
+                }
+            }
+            &.active {
+                .dice {
+                    display: block;
+                    &.dice-position1 {
+                        animation: diceAnimation 1s cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position2 {
+                        animation: diceAnimation2 800ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position3 {
+                        animation: diceAnimation3 600ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position4 {
+                        animation: diceAnimation 750ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position5 {
+                        animation: diceAnimation2 500ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position6 {
+                        animation: diceAnimation3 678ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position7 {
+                        animation: diceAnimation3 800ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                }
+            }
+        }
+    }
+    .button-container {
+        margin-top: 30px;
+        text-align: center;
+        .button {
+            width: 195px;
+            height: 60px;
+            display: inline-block;
+            &.button-start {
+                background-position: -10px -305px;
+            }
+            &.button-start {
+                &:active {
+                    background-position: -10px -235px;
+                }
+            }
+        }
+    }
+}
