@@ -17,7 +17,6 @@ class Game {
 
     start() {
         this.result = this.midAutumn.start();
-        // this.result = this.midAutumn.setResult([4, 4, 4, 4, 1, 1]).getResult();
         console.log(this.midAutumn.getAward());
         this.setDice();
     }
