@@ -80,6 +80,18 @@ export default class MidAutumn {
         mp3.play();
     }
 
+    happymusicplay() {
+        var mp3 = "//downsc.chinaz.net/Files/DownLoad/sound1/201711/9414.mp3";
+        var mp3 = new Audio(mp3);
+        mp3.play();
+    }
+
+    unhappymusicplay() {
+        var mp3 = "//downsc.chinaz.net/Files/DownLoad/sound1/202006/12989.mp3";
+        var mp3 = new Audio(mp3);
+        mp3.play();
+    }
+
     inputname(){
         for (let i = 0; i < this.count; i++) {
             this.usrname[i] = prompt('请输入玩家名称');
@@ -131,12 +143,14 @@ export default class MidAutumn {
             for (let i = 0; i < this.rule.length; i++) {
                 if (this.rule[i].reg.test(awardString)) {
                     this.award += '恭喜您获得了'+this.rule[i].name;
+                    this.happymusicplay();
                     return {
                         name: this.rule[i].name,
                     }
                 }
             }
             this.award += '很遗憾，您未中奖';
+            this.unhappymusicplay();
             return {
                 name: '未中奖',
             }
